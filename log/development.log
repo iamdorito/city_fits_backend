@@ -5,3 +5,173 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 23ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 6757)
 
 
+Started GET "/" for 127.0.0.1 at 2023-02-13 17:00:18 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ellazondo/.rvm/rubies/ruby-2.7.4/lib/ruby/gems/2.7.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ellazondo/.rvm/rubies/ruby-2.7.4/lib/ruby/gems/2.7.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.1ms | Allocations: 774)
+Completed 200 OK in 9ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 6757)
+
+
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateOutfits (20230213222304)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "outfits" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230213222304"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateOutfitProducts (20230213222618)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "outfit_products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "outfit_id" integer, "product_id" integer)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230213222618"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateProducts (20230213222735)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "category" varchar, "style" varchar, "link" varchar)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230213222735"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-02-13 22:28:01.018890"], ["updated_at", "2023-02-13 22:28:01.018890"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Black corset"], ["category", "top"], ["style", "aura"], ["link", "https://images.urbndata.com/is/image/FreePeople/65005944_001_a/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=1080"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Detail top"], ["category", "top"], ["style", "aura"], ["link", "https://images.urbndata.com/is/image/FreePeople/68523653_001_a/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=1080"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Purple top"], ["category", "top"], ["style", "aura"], ["link", "https://images.urbndata.com/is/image/FreePeople/78987070_066_a/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=1080"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Yelo croptop"], ["category", "top"], ["style", "aura"], ["link", "https://images.urbndata.com/is/image/FreePeople/78457967_072_a/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=1080"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Flower top"], ["category", "top"], ["style", "aura"], ["link", "https://images.urbndata.com/is/image/FreePeople/79011888_009_a/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=1080"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Romantic skirt"], ["category", "bottom"], ["style", "aura"], ["link", "https://images.urbndata.com/is/image/FreePeople/67123232_055_a/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=1080"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Yellow mini skirt"], ["category", "bottom"], ["style", "aura"], ["link", "https://images.urbndata.com/is/image/FreePeople/80269137_072_c/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=1080"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Silver mesh skirt"], ["category", "bottom"], ["style", "aura"], ["link", "https://images.urbndata.com/is/image/FreePeople/81127094_007_a/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=1080"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Silver pants"], ["category", "bottom"], ["style", "aura"], ["link", "https://images.urbndata.com/is/image/FreePeople/81363947_007_a/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=1080"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Printed pants"], ["category", "bottom"], ["style", "aura"], ["link", "https://images.urbndata.com/is/image/FreePeople/82717968_000_a/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=1080"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Black mules"], ["category", "shoes"], ["style", "aura"], ["link", "https://images.urbndata.com/is/image/FreePeople/78437902_001_a/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=1080"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Assimetric sandals"], ["category", "shoes"], ["style", "aura"], ["link", "https://images.urbndata.com/is/image/FreePeople/80003213_061_a/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=1080"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Green sandals"], ["category", "shoes"], ["style", "aura"], ["link", "https://images.urbndata.com/is/image/FreePeople/78165198_033_a/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=1080"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Flat sandals"], ["category", "shoes"], ["style", "aura"], ["link", "https://images.urbndata.com/is/image/FreePeople/61147864_011_b/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=1080"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Pink wedges"], ["category", "shoes"], ["style", "aura"], ["link", "https://images.urbndata.com/is/image/FreePeople/69667194_062_b/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=1080"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Simple Tee"], ["category", "top"], ["style", "ella"], ["link", "https://www.freepeople.com/shop/garner-tee/?color=211&recommendation=pdp-primary-sfrectray-rectrayboughttogethermintwo&type=REGULAR&quantity=1"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Simple Tank"], ["category", "top"], ["style", "ella"], ["link", "https://www.freepeople.com/shop/bella-rosa-top/?category=going-out-tops&color=011&type=REGULAR&quantity=1"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Vest"], ["category", "top"], ["style", "ella"], ["link", "https://www.freepeople.com/shop/kate-suit/?category=SEARCHRESULTS&color=016&searchparams=q%3Dsuit%2520set%26sayt%3Dtrue&type=REGULAR&quantity=1"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Blazer"], ["category", "top"], ["style", "ella"], ["link", "https://www.freepeople.com/shop/scotch-and-soda-heritage-check-skirt-suit-set/?category=SEARCHRESULTS&color=000&searchparams=q%3Dskirt%2520set&type=REGULAR&quantity=1"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Boyfriend buttondown"], ["category", "top"], ["style", "ella"], ["link", "https://www.freepeople.com/shop/cool-and-clean-solid-button-down/?category=button-downs&color=211&type=REGULAR&quantity=1"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Classic trouser"], ["category", "bottom"], ["style", "ella"], ["link", "https://www.freepeople.com/shop/cya-later-skate-trouser/?category=pants&color=001&type=REGULAR&quantity=1"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "High Rise Jeans"], ["category", "bottom"], ["style", "ella"], ["link", "https://www.freepeople.com/shop/tinsley-baggy-high-rise-jeans/?color=001&recommendation=pdp-primary-sfrectray-rectrayboughttogethermintwo&type=REGULAR&quantity=1"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Linnen Shorts"], ["category", "bottom"], ["style", "ella"], ["link", "https://www.freepeople.com/shop/chelsea-linen-shorts/?category=shorts&color=010&type=REGULAR&quantity=1"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Matching Suit"], ["category", "bottom"], ["style", "ella"], ["link", "https://www.freepeople.com/shop/kate-suit/?category=SEARCHRESULTS&color=016&searchparams=q%3Dsuit%2520set%26sayt%3Dtrue&type=REGULAR&quantity=1"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Set Skirt"], ["category", "bottom"], ["style", "ella"], ["link", "https://www.freepeople.com/shop/scotch-and-soda-heritage-check-skirt-suit-set/?category=SEARCHRESULTS&color=000&searchparams=q%3Dskirt%2520set&type=REGULAR&quantity=1"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Margo Mules"], ["category", "shoes"], ["style", "ella"], ["link", "https://www.freepeople.com/shop/margo-mules/?category=heels-wedges&color=111&type=REGULAR&quantity=1"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Veja Sneaks"], ["category", "shoes"], ["style", "ella"], ["link", "https://www.freepeople.com/shop/veja-dekkan-sneakers/?category=sneakers&color=008&type=REGULAR&quantity=1"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Ankle Boots"], ["category", "shoes"], ["style", "ella"], ["link", "https://www.freepeople.com/shop/emelie-ankle-boots/?category=ankle-boots&color=014&type=REGULAR&quantity=1"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Black flats"], ["category", "shoes"], ["style", "ella"], ["link", "https://www.freepeople.com/shop/repetto-ninon-flats/?category=flats&color=001&type=REGULAR&quantity=1"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Slide Sandals"], ["category", "shoes"], ["style", "ella"], ["link", "https://www.freepeople.com/shop/vicente-slide-sandals/?category=sandals&color=111&type=REGULAR&quantity=1"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Quilted Knit Jacket"], ["category", "top"], ["style", "dorothy"], ["link", "https://images.urbndata.com/is/image/FreePeople/63857528_080_c/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=640"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Puffer Vest"], ["category", "top"], ["style", "dorothy"], ["link", "https://images.urbndata.com/is/image/FreePeople/69412120_001_d/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=640"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Cream Pullover"], ["category", "top"], ["style", "dorothy"], ["link", "https://images.urbndata.com/is/image/FreePeople/51341592_012_a/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=640"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "White Baby T"], ["category", "top"], ["style", "dorothy"], ["link", "https://images.urbndata.com/is/image/FreePeople/81329666_010_0/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=640"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Floral Corset"], ["category", "top"], ["style", "dorothy"], ["link", "https://images.urbndata.com/is/image/FreePeople/80826902_266_a/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Pink Midi Skirt"], ["category", "bottom"], ["style", "dorothy"], ["link", "https://images.urbndata.com/is/image/FreePeople/80254121_066_a/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=640"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Red Chino Shorts"], ["category", "bottom"], ["style", "dorothy"], ["link", "https://images.urbndata.com/is/image/FreePeople/79292488_060_c/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=640"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Jean Short"], ["category", "bottom"], ["style", "dorothy"], ["link", "https://images.urbndata.com/is/image/FreePeople/81023038_048_c/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=640"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "LBD"], ["category", "bottom"], ["style", "dorothy"], ["link", "https://images.urbndata.com/is/image/FreePeople/79436937_001_a/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=640"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Cream Cords"], ["category", "bottom"], ["style", "dorothy"], ["link", "https://images.urbndata.com/is/image/FreePeople/70039300_016_a/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=640"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "On Cloud Sneakers"], ["category", "shoes"], ["style", "dorothy"], ["link", "https://images.urbndata.com/is/image/FreePeople/64122849_010_b/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=640"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Tall Cowboy Boots"], ["category", "shoes"], ["style", "dorothy"], ["link", "https://images.urbndata.com/is/image/FreePeople/78902921_001_c/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=640"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Strappy Heels"], ["category", "shoes"], ["style", "dorothy"], ["link", "https://images.urbndata.com/is/image/FreePeople/66780180_221_a/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=640"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Wedge Sandals"], ["category", "shoes"], ["style", "dorothy"], ["link", "https://images.urbndata.com/is/image/FreePeople/66714999_001_c/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=640"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "style", "link") VALUES (?, ?, ?, ?)[0m  [["name", "Ankle Boots"], ["category", "shoes"], ["style", "dorothy"], ["link", "https://images.urbndata.com/is/image/FreePeople/69311884_009_b/?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=640"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOutfit Create (0.1ms)[0m  [1m[32mINSERT INTO "outfits" ("name") VALUES (?)[0m  [["name", "aura's first outfit"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
