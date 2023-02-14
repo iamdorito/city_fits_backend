@@ -3,11 +3,14 @@ class ProductsController < ApplicationController
 
   # GET /products or /products.json
   def index
-    @products = Product.all
+    products = Product.all
+    render json: products
   end
 
   # GET /products/1 or /products/1.json
   def show
+    # ella added this. Not sure if necessary
+    # products = Product.find_by(id: params[:id])
   end
 
   # GET /products/new
