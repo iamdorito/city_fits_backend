@@ -53,7 +53,8 @@ p "Outfit_products"
 
 
 p "Outfits"
-Outfit.create(name:"aura's first outfit")
+
+p "Users"
 
 p "Done seeding!"
 
