@@ -51,7 +51,6 @@ product45=Product.create(name: 'Ankle Boots', category: 'shoes', style: 'dorothy
 
 p "Outfit_products"
 
-
 p "Outfits"
 
 p "Users"
