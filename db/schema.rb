@@ -18,8 +18,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_14_202733) do
 
   create_table "outfits", force: :cascade do |t|
     t.string "name"
-    t.integer "latitude"
-    t.integer "longitude"
+    t.float "latitude"
+    t.float "longitude"
     t.integer "user_id"
   end
 

@@ -26,10 +26,8 @@ protect_from_forgery with: :null_session
   # PATCH/PUT /outfits/1 or /outfits/1.json
   def update
     outfit = Outfit.find_by!(id:params[:id])
+    # outfit.update!(outfit_params)
     outfit.update(name: params[:name])
-    outfit.update(latitude: params[:latitude])
-    outfit.update(longitude: params[:longitude])
-    outfit.update(user_id: params[:user_id])
     render json: outfit
   end
 
@@ -39,4 +37,9 @@ protect_from_forgery with: :null_session
     outfit.destroy
     render json: {'delete confirmation':'outfit deleted'}
   end
+
+  private
+    def outfit_params
+      params.require(:outfit).permit(:name, :latitude, :longitude)
+    end
 end
