@@ -27,9 +27,6 @@ protect_from_forgery with: :null_session
   def update
     outfit = Outfit.find_by!(id:params[:id])
     outfit.update(name: params[:name])
-    outfit.update(latitude: params[:latitude])
-    outfit.update(longitude: params[:longitude])
-    outfit.update(user_id: params[:user_id])
     render json: outfit
   end
 
